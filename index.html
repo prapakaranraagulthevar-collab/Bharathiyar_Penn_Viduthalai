@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>பாரதியின் புதுமைப் பெண் | Bharathiyar's Vision on Women's Liberation & Safety Hub</title>
+  <meta name="description" content="Mahakavi Subramania Bharathiyar's vision on Penn Viduthalai (Women Liberation), literacy, inspiring poems, safety tools, emergency SOS, voice-enabled AI assistant, and women entrepreneurship portal." />
+  
+  <!-- Google Fonts: Mukta Malar (Tamil), Cinzel Decorative, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Mukta+Malar:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Canvas for Fiery Embers & Tamil Typography Animation -->
+  <canvas id="fireCanvas"></canvas>
+
+  <!-- Top Emergency Broadcast Ticker -->
+  <div class="emergency-ticker">
+    <div class="ticker-content">
+      <span class="ticker-badge"><i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="ticker_badge">24x7 அவசர உதவி / HELP</span></span>
+      <span class="ticker-text">
+        பெண்கள் அவசர உதவி எண் (Women Helpline): <a href="tel:1091"><strong>1091</strong></a> | 
+        தேசிய அவசர எண் (National Emergency): <a href="tel:112"><strong>112</strong></a> | 
+        பெண்கள் வன்கொடுமை தடுப்பு (Domestic Violence Helpline): <a href="tel:181"><strong>181</strong></a> | 
+        குழந்தைகள் உதவி (Childline): <a href="tel:1098"><strong>1098</strong></a> |
+        புதுமைப் பெண் திட்டம்: அரசு பள்ளி மாணவியருக்கு மாதந்தோறும் ₹1,000 உதவித்தொகை!
+      </span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-fire-flame-curved logo-flame"></i>
+          <span class="logo-turban-mark">பாரதி</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title-ta">புதுமைப் பெண்</span>
+          <span class="brand-title-en">Mahakavi Bharathi's Vision</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> <span data-i18n="nav_home">முகப்பு</span></a>
+        <a href="#vision" class="nav-link"><i class="fa-solid fa-scroll"></i> <span data-i18n="nav_vision">பாரதி பார்வை</span></a>
+        <a href="#poems" class="nav-link"><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="nav_poems">கவிதைகள்</span></a>
+        <a href="#safety" class="nav-link safety-highlight"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="nav_safety">பெண்கள் பாதுகாப்பு</span></a>
+        <a href="#schemes" class="nav-link"><i class="fa-solid fa-award"></i> <span data-i18n="nav_schemes">அரசு திட்டங்கள்</span></a>
+        <a href="#business" class="nav-link"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav_business">தொழில் & வேலை</span></a>
+        <a href="#learning" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="nav_learning">கற்க & வினாடிவினா</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button class="lang-toggle-btn" id="langToggle" title="Switch Language / மொழி மாற்றம்">
+          <i class="fa-solid fa-language"></i>
+          <span id="langLabel">English</span>
+        </button>
+
+        <!-- Quick SOS Alert Trigger -->
+        <button class="header-sos-btn" id="headerSosBtn" onclick="triggerSosModal()">
+          <span class="pulse-ring"></span>
+          <i class="fa-solid fa-bell"></i> <span>SOS</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-video-bg-wrap">
+        <div class="video-overlay"></div>
+        <div class="hero-glow-orb orb-1"></div>
+        <div class="hero-glow-orb orb-2"></div>
+      </div>
+
+      <div class="hero-content-wrapper">
+        <div class="hero-left">
+          <div class="hero-pill-badge">
+            <i class="fa-solid fa-certificate"></i>
+            <span data-i18n="hero_badge">மகாகவி சுப்பிரமணிய பாரதியாரின் புரட்சிப் பார்வை</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-title-highlight" data-i18n="hero_title_1">நிமிர்ந்த நன்னடை,</span><br />
+            <span class="hero-title-main" data-i18n="hero_title_2">நேர்கொண்ட பார்வை!</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            "ஆணும் பெண்ணும் நிகரெனக் கொள்வதால் அறிவிலோங்கி இவ்வையம் தழைக்குமாம்!" — பெண்கள் விடுதலை, கல்வி உரிமை, சுயமரியாதை மற்றும் அச்சமற்ற பெண்களுக்கான முழுமையான பாதுகாப்பு & தொழில் மையம்.
+          </p>
+
+          <!-- Audio Recital Bar: Bharathiyar's Anthem -->
+          <div class="hero-audio-player">
+            <div class="audio-info">
+              <i class="fa-solid fa-music song-note-icon"></i>
+              <div class="audio-text">
+                <strong data-i18n="audio_anthem_title">அச்சமில்லை அச்சமில்லை (Fearless Anthem)</strong>
+                <span data-i18n="audio_anthem_sub">பாரதியின் வீரமுழக்கம் & கவிதை குரல் வடிவம்</span>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="audio-play-btn" id="heroAudioBtn" onclick="toggleBharathiAudio()">
+                <i class="fa-solid fa-play" id="audioBtnIcon"></i>
+                <span id="audioBtnText">கேளுங்கள் (Listen)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="cta-btn cta-primary" onclick="openChatDrawer('வணக்கம் பாரதி, புதுமைப் பெண் பற்றி எனக்குக் கூறுங்கள்.')">
+              <i class="fa-solid fa-comments"></i>
+              <span data-i18n="cta_chat">பாரதி AI உடன் பேசுங்கள்</span>
+            </button>
+            <button class="cta-btn cta-voice" onclick="startVoiceAssistant()">
+              <i class="fa-solid fa-microphone-lines"></i>
+              <span data-i18n="cta_voice">குரல் வழி உரையாடு (Voice)</span>
+            </button>
+            <a href="#safety" class="cta-btn cta-danger">
+              <i class="fa-solid fa-shield-heart"></i>
+              <span data-i18n="cta_safety">பாதுகாப்பு & SOS மையம்</span>
+            </a>
+            <a href="#business" class="cta-btn cta-secondary">
+              <i class="fa-solid fa-store"></i>
+              <span data-i18n="cta_business">பெண்கள் தொழில் விண்ணப்பம்</span>
+            </a>
+          </div>
+
+          <!-- Quick Stats Counter -->
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc" data-i18n="stat_1">சம உரிமை தத்துவம்</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">24x7</span>
+              <span class="stat-desc" data-i18n="stat_2">அவசர உதவி நெட்வொர்க்</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">₹10L+</span>
+              <span class="stat-desc" data-i18n="stat_3">பெண்கள் தொழில் கடன் திட்டங்கள்</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">1091 / 112</span>
+              <span class="stat-desc" data-i18n="stat_4">காவல்துறை நேரடி அழைப்பு</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Interactive Bharati Art / Video Embed Player -->
+        <div class="hero-right">
+          <div class="bharathi-art-card">
+            <div class="art-frame">
+              <!-- SVG Silhouette of Bharathiyar with Turban & Flame -->
+              <div class="bharathi-portrait-wrap">
+                <div class="flame-aura"></div>
+                <div class="portrait-svg-box">
+                  <svg viewBox="0 0 400 450" class="bharathi-svg" aria-label="Mahakavi Subramania Bharathi Portrait">
+                    <defs>
+                      <linearGradient id="turbanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff7ed"/>
+                        <stop offset="50%" stop-color="#fed7aa"/>
+                        <stop offset="100%" stop-color="#fdba74"/>
+                      </linearGradient>
+                      <linearGradient id="mustacheGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#111827"/>
+                        <stop offset="50%" stop-color="#1f2937"/>
+                        <stop offset="100%" stop-color="#111827"/>
+                      </linearGradient>
+                      <radialGradient id="tilakGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#dc2626"/>
+                        <stop offset="100%" stop-color="#991b1b"/>
+                      </radialGradient>
+                    </defs>
+
+                    <!-- Aura / Sun burst -->
+                    <circle cx="200" cy="210" r="175" fill="rgba(245, 158, 11, 0.09)" stroke="rgba(245, 158, 11, 0.35)" stroke-width="2" stroke-dasharray="8 6" />
+                    <circle cx="200" cy="210" r="140" fill="rgba(239, 68, 68, 0.06)" />
+
+                    <!-- Shoulder / Coat (Black coat of Bharathi) -->
+                    <path d="M70,390 C100,320 140,310 200,310 C260,310 300,320 330,390 L350,440 L50,440 Z" fill="#1e293b" />
+                    <!-- White collar / shirt -->
+                    <path d="M170,310 L200,350 L230,310 Z" fill="#f8fafc" />
+
+                    <!-- Neck -->
+                    <path d="M165,270 L165,315 L235,315 L235,270 Z" fill="#e2ba9b" />
+
+                    <!-- Face Contour -->
+                    <path d="M140,165 C140,250 170,285 200,285 C230,285 260,250 260,165 Z" fill="#f2cbb2" />
+                    <!-- Ears -->
+                    <ellipse cx="137" cy="185" rx="9" ry="18" fill="#e5b89a" />
+                    <ellipse cx="263" cy="185" rx="9" ry="18" fill="#e5b89a" />
+
+                    <!-- Forehead Vibhuti & Kumkum Tilak -->
+                    <rect x="165" y="142" width="70" height="4" rx="2" fill="#f1f5f9" opacity="0.9" />
+                    <rect x="165" y="149" width="70" height="4" rx="2" fill="#f1f5f9" opacity="0.9" />
+                    <rect x="165" y="156" width="70" height="4" rx="2" fill="#f1f5f9" opacity="0.9" />
+                    <circle cx="200" cy="151" r="5" fill="url(#tilakGrad)" />
+
+                    <!-- Eyes - Piercing and fearless -->
+                    <path d="M160,180 Q177,172 192,180 Q177,185 160,180 Z" fill="#ffffff" />
+                    <circle cx="178" cy="179" r="4.5" fill="#0f172a" />
+                    <circle cx="179" cy="178" r="1.5" fill="#ffffff" />
+                    <path d="M157,172 Q177,162 195,172" stroke="#1f2937" stroke-width="3.5" fill="none" stroke-linecap="round" />
+
+                    <path d="M208,180 Q223,172 240,180 Q223,185 208,180 Z" fill="#ffffff" />
+                    <circle cx="222" cy="179" r="4.5" fill="#0f172a" />
+                    <circle cx="223" cy="178" r="1.5" fill="#ffffff" />
+                    <path d="M205,172 Q223,162 243,172" stroke="#1f2937" stroke-width="3.5" fill="none" stroke-linecap="round" />
+
+                    <!-- Nose -->
+                    <path d="M197,178 L194,210 L206,210 Z" fill="#dba885" />
+
+                    <!-- Bharathi's Renowned Majestic Mustache -->
+                    <path d="M142,216 C168,228 190,222 200,227 C210,222 232,228 258,216 C250,235 220,246 200,238 C180,246 150,235 142,216 Z" fill="url(#mustacheGrad)" />
+
+                    <!-- Lower Lip -->
+                    <path d="M190,250 Q200,256 210,250" stroke="#b91c1c" stroke-width="2" fill="none" />
+
+                    <!-- Bharathiyar's Iconic White Turban (முண்டாசு) -->
+                    <path d="M125,160 C110,130 115,80 160,60 C200,45 250,55 275,85 C295,110 285,150 272,165 C285,145 285,100 250,75 C210,50 170,60 135,90 C120,110 120,140 125,160 Z" fill="url(#turbanGrad)" />
+                    <path d="M120,150 C110,95 160,50 200,50 C250,50 290,95 280,150 C260,135 240,130 200,130 C160,130 140,135 120,150 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+                    <path d="M125,135 Q200,105 275,135" stroke="#cbd5e1" stroke-width="3" fill="none" />
+                    <path d="M130,115 Q200,90 270,115" stroke="#cbd5e1" stroke-width="3" fill="none" />
+                    <path d="M145,90 Q200,70 255,90" stroke="#cbd5e1" stroke-width="2" fill="none" />
+                    <path d="M120,135 C110,155 105,190 108,230 C110,235 116,235 117,230 C116,190 120,160 128,142 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Live Video Embed Player Box -->
+              <div class="bharathi-video-container">
+                <div class="video-header-bar">
+                  <span class="video-title"><i class="fa-brands fa-youtube text-red-500"></i> <span data-i18n="video_title">பாரதியின் சிறப்பு ஆவணப்படம் & பாடல்கள்</span></span>
+                  <span class="video-live-badge"><i class="fa-solid fa-circle"></i> VIDEO TRIBUTE</span>
+                </div>
+                <div class="video-iframe-wrapper">
+                  <iframe 
+                    src="https://www.youtube-nocookie.com/embed/fD33Z2_nC_s?rel=0&modestbranding=1" 
+                    title="Mahakavi Bharathiyar Penn Viduthalai Video" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <div class="video-footer-caption" data-i18n="video_caption">
+                  "பெண்மை வாழ்கவென்று கூத்திடுவோமடா!" — மகாகவி பாரதியாரின் பெண் விடுதலைப் பாடல்கள் & வரலாற்று ஆவணத் தொகுப்பு.
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote badge below card -->
+            <div class="card-quote-footer">
+              <i class="fa-solid fa-quote-left"></i>
+              <p class="quote-txt" data-i18n="hero_quote_footer">"மாதர் தம்மை இழிவு செய்யும் மடமையைக் கொளுத்துவோம்!"</p>
+              <span class="quote-author">— மகாகவி பாரதியார்</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK EMERGENCY SOS BANNER -->
+    <section class="quick-sos-banner" id="sos-bar">
+      <div class="container">
+        <div class="sos-banner-inner">
+          <div class="sos-banner-left">
+            <div class="sos-radar-icon">
+              <i class="fa-solid fa-tower-broadcast"></i>
+            </div>
+            <div>
+              <h3 class="sos-banner-title" data-i18n="sos_banner_title">அவசர ஆபத்தா? உடனடி உதவி பெற இங்கே அழுத்தவும்!</h3>
+              <p class="sos-banner-desc" data-i18n="sos_banner_desc">Instant Emergency Location Broadcast, Siren Sound & Direct Dialing to Police 112 / Women Helpline 1091</p>
+            </div>
+          </div>
+          <div class="sos-banner-actions">
+            <button class="mega-sos-button" onclick="triggerSosModal()">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>EMERGENCY SOS ALERT</span>
+            </button>
+            <a href="tel:112" class="quick-call-btn">
+              <i class="fa-solid fa-phone-volume"></i> 112
+            </a>
+            <a href="tel:1091" class="quick-call-btn btn-pink">
+              <i class="fa-solid fa-phone-volume"></i> 1091 (Women)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: BHARATHIYAR'S REVOLUTIONARY VISION & GREATNESS -->
+    <section class="section-wrapper bg-gradient-dark" id="vision">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill"><i class="fa-solid fa-fire"></i> <span data-i18n="vision_pill">புரட்சியின் விடியல்</span></div>
+          <h2 class="section-title" data-i18n="vision_title">பாரதியாரின் 'பெண் விடுதலை' பெருமையும் வரலாறும்</h2>
+          <p class="section-subtitle" data-i18n="vision_subtitle">
+            How Mahakavi Bharathi Shattered Century-Old Shackles & Prophesied the Modern Empowered Woman
+          </p>
+        </div>
+
+        <div class="vision-grid">
+          <!-- Card 1: Sister Nivedita's Transformation -->
+          <div class="vision-card glass-card">
+            <div class="v-card-icon bg-amber"><i class="fa-solid fa-hands-praying"></i></div>
+            <h3 class="v-card-title" data-i18n="v1_title">சகோதரி நிவேதிதாவின் தரிசனம்</h3>
+            <span class="v-card-tag" data-i18n="v1_tag">1906 - கொல்கத்தா திருப்புமுனை</span>
+            <p class="v-card-desc" data-i18n="v1_desc">
+              1906-ல் சுவாமி விவேகானந்தரின் சீடரான சகோதரி நிவேதிதாவை பாரதி சந்தித்தபோது, பாரதியிடம் "உன் மனைவியை ஏன் அழைத்து வரவில்லை?" என வினவினார். பாரதி சமூகம் பெண்களை வெளியே அனுமதிப்பதில்லை என கூறியதும், நிவேதிதா கோபமுற்று "பெண்ணை அடிமையாக நடத்தும் வரை தாய்நாடு விடுதலை பெறாது!" என்றார். இந்த சொல்லே பாரதியை 'பெண் விடுதலைப் போராளி'யாக மாற்றியது. அவரை தன் ஞான குருவாக ஏற்றார் பாரதி.
+            </p>
+            <div class="v-card-quote">
+              "ஞான குருவாக நின்றவள் நிவேதிதா அன்னை!"
+            </div>
+          </div>
+
+          <!-- Card 2: Against Child Marriage & Illiteracy -->
+          <div class="vision-card glass-card">
+            <div class="v-card-icon bg-rose"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h3 class="v-card-title" data-i18n="v2_title">கல்வி மறுப்பும் பால்ய திருமண எதிர்ப்பும்</h3>
+            <span class="v-card-tag" data-i18n="v2_tag">மடமையைக் கொளுத்திய புரட்சி</span>
+            <p class="v-card-desc" data-i18n="v2_desc">
+              பெண்களுக்குக் கல்வி தருவதே குற்றம் எனக் கருதப்பட்ட காலத்தில், "ஏட்டையும் பெண்கள் தொடுவது தீமையென்றெண்ணியிருந்தவர் மாய்ந்து விட்டார்" என கர்ஜித்தவர் பாரதி. உடன்கட்டை ஏறுதல் (சதி), கைம்பெண் கொடுமை, பால்ய விவாகம் ஆகிய அனைத்திற்கும் எதிராக பேனாவை வாளாக சுழற்றிய முதல் தமிழ் மாவீரன்.
+            </p>
+            <div class="v-card-quote">
+              "மாதர் தம்மை இழிவு செய்யும் மடமையைக் கொளுத்துவோம்!"
+            </div>
+          </div>
+
+          <!-- Card 3: Pudumai Penn Definition -->
+          <div class="vision-card glass-card">
+            <div class="v-card-icon bg-cyan"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+            <h3 class="v-card-title" data-i18n="v3_title">யார் இந்த 'புதுமைப் பெண்'?</h3>
+            <span class="v-card-tag" data-i18n="v3_tag">பாரதியின் கனவுப் பெண் வடிவம்</span>
+            <p class="v-card-desc" data-i18n="v3_desc">
+              அச்சமும், நாணமும், மடமும், பயிர்ப்பும் பெண்களின் ஆபரணங்கள் எனப் போதித்த பழமைவாதத்தை தூக்கி எறிந்தார். நிமிர்ந்த நடை, நேர்கொண்ட பார்வை, யாருக்கும் அஞ்சாத நெறி, அறிவுச் செருக்கு உடையவளே உண்மையான புதுமைப் பெண் என்று உலகிற்கு முதன்முதலில் பறைசாற்றினார்.
+            </p>
+            <div class="v-card-quote">
+              "நிலத்தில் யார்க்கும் அஞ்சாத நெறிகள் கொண்டவள்!"
+            </div>
+          </div>
+
+          <!-- Card 4: All Rights to All & World Transformation -->
+          <div class="vision-card glass-card">
+            <div class="v-card-icon bg-emerald"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3 class="v-card-title" data-i18n="v4_title">எல்லோரும் இந்நாட்டு மன்னர்</h3>
+            <span class="v-card-tag" data-i18n="v4_tag">சமத்துவமும் மனித உரிமையும்</span>
+            <p class="v-card-desc" data-i18n="v4_desc">
+              "ஆணும் பெண்ணும் நிகரெனக் கொள்வதால் அறிவிலோங்கி இவ்வையம் தழைக்குமாம்!" என்ற பாரதியின் தத்துவமே இன்றைய பெண்களின் விண்வெளிப் பயணம், ஆட்சி அதிகாரம், நீதித்துறை சாதனைகளுக்கு விதை போட்டது. பாரதியின் கனவு இன்று சர்வதேச மனித உரிமைகளுக்கான அடித்தளமாகப் போற்றப்படுகிறது.
+            </p>
+            <div class="v-card-quote">
+              "ஆணும் பெண்ணும் சமம்; இதில் பேதமில்லை!"
+            </div>
+          </div>
+        </div>
+
+        <!-- Then vs Now Comparison Matrix -->
+        <div class="comparison-section glass-card mt-5">
+          <h3 class="comparison-title text-center" data-i18n="matrix_title"><i class="fa-solid fa-arrows-split-up-and-left"></i> பாரதி கண்ட மாற்றம்: பழமைச் சங்கிலியிலிருந்து புதுமை வானம் வரை</h3>
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th data-i18n="col_aspect">அம்சம் (Aspect)</th>
+                  <th data-i18n="col_past">19-ஆம் நூற்றாண்டு அடிமை நிலை (Past Struggles)</th>
+                  <th data-i18n="col_bharathi">பாரதியின் தீர்க்கதரிசனம் (Bharathi's Vision)</th>
+                  <th data-i18n="col_present">இன்றைய புதுமைப் பெண் நிலை (Modern Reality)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong data-i18n="r1_aspect">கல்வி உரிமை (Education)</strong></td>
+                  <td data-i18n="r1_past">பெண்கள் ஏடு தொடக் கூடாது; வீட்டு வேலை மட்டுமே கற்பிக்கப்பட்டது.</td>
+                  <td data-i18n="r1_vision">"பட்டங்கள் ஆள்வதும் சட்டங்கள் செய்வதும் பாரினில் பெண்கள் நடத்த வந்தோம்!"</td>
+                  <td data-i18n="r1_present">பல்கலைக்கழகங்களில் 55%+ பெண்கள், விஞ்ஞானிகள், விண்வெளி வீரர்கள்.</td>
+                </tr>
+                <tr>
+                  <td><strong data-i18n="r2_aspect">சுதந்திரம் & நடத்தை (Freedom)</strong></td>
+                  <td data-i18n="r2_past">அச்சம், மடம், நாணம் என முடக்கி பூட்டி வைக்கப்பட்டனர்.</td>
+                  <td data-i18n="r2_vision">"நிமிர்ந்த நன்னடை நேர்கொண்ட பார்வையும் நிலத்தில் யார்க்கும் அஞ்சாத நெறிகளும்!"</td>
+                  <td data-i18n="r2_present">அச்சமின்றி தலைமை தாங்கும் பிரதமர்கள், நீதிபதிகள், ராணுவ அதிகாரிகள்.</td>
+                </tr>
+                <tr>
+                  <td><strong data-i18n="r3_aspect">பொருளாதாரம் (Economy & Career)</strong></td>
+                  <td data-i18n="r3_past">ஆண்களை மட்டுமே நம்பி வாழும் முழுமையான பொருளாதார அடிமைத்தனம்.</td>
+                  <td data-i18n="r3_vision">"சாத்திரம் கற்போம்; தொழிலும் செய்வோம்; உலகினை ஆள்வோம்!"</td>
+                  <td data-i18n="r3_present">தொழில்முனைவோர், CEO-க்கள், யூனிகார்ன் ஸ்டார்ட்அப் நிறுவனர்கள்.</td>
+                </tr>
+                <tr>
+                  <td><strong data-i18n="r4_aspect">சமூக சட்டம் (Social Rights)</strong></td>
+                  <td data-i18n="r4_past">குழந்தை திருமணம், சொத்துரிமை மறுப்பு, கைம்பெண் சித்திரவதை.</td>
+                  <td data-i18n="r4_vision">"ஆணும் பெண்ணும் நிகரெனக் கொள்வதால் அறிவிலோங்கி இவ்வையம் தழைக்கும்!"</td>
+                  <td data-i18n="r4_present">சம சொத்துரிமை சட்டம், மகப்பேறு சலுகைகள், பெண்களுக்கான சிறப்பு இடஒதுக்கீடு.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BHARATHIYAR'S POEMS & LITERARY TREASURE -->
+    <section class="section-wrapper" id="poems">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill"><i class="fa-solid fa-book-bookmark"></i> <span data-i18n="poems_pill">கவிதைத் தென்றல் & கனல்</span></div>
+          <h2 class="section-title" data-i18n="poems_title">பெண் விடுதலைக்கான பாரதியின் தீப்பொறிப் பாடல்கள்</h2>
+          <p class="section-subtitle" data-i18n="poems_subtitle">
+            Explore Mahakavi's immortal verses with Tamil lines, English interpretations, and audio recitation
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="poem-tabs">
+          <button class="poem-tab-btn active" onclick="filterPoems('all')">அனைத்தும் (All)</button>
+          <button class="poem-tab-btn" onclick="filterPoems('pudumai')">புதுமைப் பெண் (The Modern Woman)</button>
+          <button class="poem-tab-btn" onclick="filterPoems('kummi')">விடுதலைக் கும்மி (Liberation Song)</button>
+          <button class="poem-tab-btn" onclick="filterPoems('equality')">சமத்துவம் (Gender Equality)</button>
+          <button class="poem-tab-btn" onclick="filterPoems('courage')">அச்சமில்லை (Fearlessness)</button>
+        </div>
+
+        <div class="poems-grid" id="poemsContainer">
+          <!-- Poem 1 -->
+          <div class="poem-card glass-card" data-category="pudumai">
+            <div class="poem-header">
+              <span class="poem-number">கவிதை 01</span>
+              <span class="poem-badge">புதுமைப் பெண்</span>
+            </div>
+            <h3 class="poem-title">நிமிர்ந்த நன்னடை நேர்கொண்ட பார்வை</h3>
+            <div class="poem-tamil-lines">
+              <p>நிமிர்ந்த நன்னடை நேர்கொண்ட பார்வையும்,</p>
+              <p>நிலத்தில் யார்க்கும் அஞ்சாத நெறிகளும்,</p>
+              <p>திமிர்ந்த ஞானச் செருக்கும் இருப்பதால்</p>
+              <p>செம்மை மாதர் திறம்புவ தில்லையாம்;</p>
+              <p>அமிழ்தூ றியகண்ணீர் மல்குங்கண்கள்,</p>
+              <p>ஆற்றல் வாய்ந்த மொழிகள், புதிய</p>
+              <p>தமிழ்போலப் பொங்கி நின்றெழும் உள்ளம்</p>
+              <p>தழுவப்பெற்றவள் புதுமைப் பெண்!</p>
+            </div>
+            <div class="poem-english-meaning">
+              <strong>English Interpretation:</strong>
+              <p>"With an upright walk, an unswerving direct gaze, and principles that fear no human being on this earth; crowned with fearless intellectual pride, the noble modern woman shall never stagger!"</p>
+            </div>
+            <div class="poem-card-actions">
+              <button class="poem-speak-btn" onclick="speakPoem(this)">
+                <i class="fa-solid fa-volume-high"></i> பாடலைக் கேளுங்கள்
+              </button>
+              <button class="poem-copy-btn" onclick="copyPoem(this)">
+                <i class="fa-solid fa-copy"></i> நகலெடு
+              </button>
+            </div>
+          </div>
+
+          <!-- Poem 2 -->
+          <div class="poem-card glass-card" data-category="kummi">
+            <div class="poem-header">
+              <span class="poem-number">கவிதை 02</span>
+              <span class="poem-badge">விடுதலைக் கும்மி</span>
+            </div>
+            <h3 class="poem-title">ஏட்டையும் பெண்கள் தொடுவது தீமை என்ற மடமை</h3>
+            <div class="poem-tamil-lines">
+              <p>ஏட்டையும் பெண்கள் தொடுவது தீமையென்</p>
+              <p>றெண்ணியி ருந்தவர் மாய்ந்துவிட்டார்;</p>
+              <p>வீட்டுக்குள்ளே பெண்ணைப் பூட்டிவைப்போம் என்ற</p>
+              <p>விந்தை மனிதர் தலைகவிழ்ந்தார்!</p>
+              <p>பட்டங்கள் ஆள்வதும் சட்டங்கள் செய்வதும்</p>
+              <p>பாரினில் பெண்கள் நடத்த வந்தோம்;</p>
+              <p>எட்டு மறிவினில் ஆணுக் கிங்கேபெண்</p>
+              <p>இளைப்பில்லை காணென்று கும்மியடி!</p>
+            </div>
+            <div class="poem-english-meaning">
+              <strong>English Interpretation:</strong>
+              <p>"Dead and gone are those who thought women touching books was a sin! Ashamed are those curious men who thought they could imprison women inside houses! We have arrived to govern nations and make the laws!"</p>
+            </div>
+            <div class="poem-card-actions">
+              <button class="poem-speak-btn" onclick="speakPoem(this)">
+                <i class="fa-solid fa-volume-high"></i> பாடலைக் கேளுங்கள்
+              </button>
+              <button class="poem-copy-btn" onclick="copyPoem(this)">
+                <i class="fa-solid fa-copy"></i> நகலெடு
+              </button>
+            </div>
+          </div>
+
+          <!-- Poem 3 -->
+          <div class="poem-card glass-card" data-category="equality">
+            <div class="poem-header">
+              <span class="poem-number">கவிதை 03</span>
+              <span class="poem-badge">சமத்துவம்</span>
+            </div>
+            <h3 class="poem-title">பெண்மை வாழ்கவென்று கூத்திடுவோமடா</h3>
+            <div class="poem-tamil-lines">
+              <p>பெண்மை வாழ்கவென்று கூத்திடுவோமடா!</p>
+              <p>பெண்மை வெல்கவென்று கூத்திடுவோமடா!</p>
+              <p>ஆணும் பெண்ணும் நிகரெனக் கொள்வதால்</p>
+              <p>அறிவிலோங்கி இவ்வையம் தழைக்குமாம்;</p>
+              <p>பூணு நல்லறத் தோடொளிர் வாழ்க்கையிற்</p>
+              <p>புதிய விந்தை புரியவல்லார்களே!</p>
+            </div>
+            <div class="poem-english-meaning">
+              <strong>English Interpretation:</strong>
+              <p>"Let us dance and celebrate shouting 'Long live womanhood!' When society embraces men and women as completely equal, this earth shall flourish with unprecedented brilliance and enlightenment!"</p>
+            </div>
+            <div class="poem-card-actions">
+              <button class="poem-speak-btn" onclick="speakPoem(this)">
+                <i class="fa-solid fa-volume-high"></i> பாடலைக் கேளுங்கள்
+              </button>
+              <button class="poem-copy-btn" onclick="copyPoem(this)">
+                <i class="fa-solid fa-copy"></i> நகலெடு
+              </button>
+            </div>
+          </div>
+
+          <!-- Poem 4 -->
+          <div class="poem-card glass-card" data-category="courage">
+            <div class="poem-header">
+              <span class="poem-number">கவிதை 04</span>
+              <span class="poem-badge">அச்சமின்மை</span>
+            </div>
+            <h3 class="poem-title">அச்சமில்லை அச்சமில்லை அச்சமென்பதில்லையே</h3>
+            <div class="poem-tamil-lines">
+              <p>அச்சமில்லை அச்சமில்லை அச்சமென்ப தில்லையே,</p>
+              <p>இச்சகத்து ளோரெலாம் எதிர்த்து நின்ற போதினும்,</p>
+              <p>அச்சமில்லை அச்சமில்லை அச்சமென்ப தில்லையே!</p>
+              <p>துச்சமாக எண்ணியே நம்மொடு பகைத்துமே</p>
+              <p>இச்சகத்து ளோர்கள்வந்து மோதினாலு மச்சமில்லை!</p>
+              <p>உச்சிமீது வானிடிந்து வீழுகின்ற போதினும்,</p>
+              <p>அச்சமில்லை அச்சமில்லை அச்சமென்ப தில்லையே!</p>
+            </div>
+            <div class="poem-english-meaning">
+              <strong>English Interpretation:</strong>
+              <p>"Fear we have none, fear we have none, there is no such thing as fear! Even if the whole universe rises up against us, even if the skies crumble and fall upon our heads—fear we have none!"</p>
+            </div>
+            <div class="poem-card-actions">
+              <button class="poem-speak-btn" onclick="speakPoem(this)">
+                <i class="fa-solid fa-volume-high"></i> பாடலைக் கேளுங்கள்
+              </button>
+              <button class="poem-copy-btn" onclick="copyPoem(this)">
+                <i class="fa-solid fa-copy"></i> நகலெடு
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WOMEN SAFETY COMMAND HUB & EMERGENCY SOS -->
+    <section class="section-wrapper bg-darker" id="safety">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill section-pill-danger"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="safety_pill">24x7 பெண்கள் பாதுகாப்பு அரண்</span></div>
+          <h2 class="section-title" data-i18n="safety_title">பெண்கள் பாதுகாப்பு மையம் (Women Safety Hub)</h2>
+          <p class="section-subtitle" data-i18n="safety_subtitle">
+            Emergency SOS Alerter, Speed Dials, Safety Apps, and Instant Location Sharing for Women in Distress
+          </p>
+        </div>
+
+        <!-- Main SOS Emergency Console -->
+        <div class="sos-console-card glass-card">
+          <div class="console-left">
+            <div class="sos-alert-ring">
+              <button class="sos-big-trigger" id="mainSosTrigger" onclick="triggerSosModal()">
+                <div class="sos-pulse-wave wave-1"></div>
+                <div class="sos-pulse-wave wave-2"></div>
+                <div class="sos-inner-btn">
+                  <i class="fa-solid fa-radiation"></i>
+                  <span class="sos-btn-text">SOS</span>
+                  <span class="sos-sub-text" data-i18n="sos_sub_text">அவசர ஆபத்து</span>
+                </div>
+              </button>
+            </div>
+            <div class="console-hint" data-i18n="sos_hint">
+              <i class="fa-solid fa-hand-pointer"></i> <strong>ஒருமுறை அழுத்தினால்:</strong> சைரன் ஒலிக்கும், உங்கள் GPS இருப்பிடம் கணக்கிடப்பட்டு அவசர செய்தியாக அனுப்பப்படும்.
+            </div>
+          </div>
+
+          <div class="console-right">
+            <h3 class="console-heading" data-i18n="loc_heading"><i class="fa-solid fa-location-crosshairs"></i> நேரடி இருப்பிடம் & பாதுகாப்பு தகவல்</h3>
+            <p class="console-sub" data-i18n="loc_sub">உங்கள் இருப்பிடத்தை உடனடியாக குடும்பத்தினர் அல்லது காவல்துறைக்கு வாட்ஸ்அப் / SMS மூலம் பகிரவும்:</p>
+            
+            <div class="location-status-box" id="locationStatusBox">
+              <div class="loc-icon"><i class="fa-solid fa-map-pin"></i></div>
+              <div class="loc-details">
+                <span class="loc-label" data-i18n="loc_status_lbl">தற்போதைய நிலை:</span>
+                <span class="loc-value" id="currentLocationText">இருப்பிடம் கண்டறிய 'இருப்பிடத்தைப் பெறு' பொத்தானை அழுத்தவும்</span>
+              </div>
+            </div>
+
+            <div class="loc-actions">
+              <button class="btn btn-outline" onclick="detectUserLocation()">
+                <i class="fa-solid fa-crosshairs"></i> <span data-i18n="btn_gps">இருப்பிடத்தைக் கண்டறி (Get GPS)</span>
+              </button>
+              <button class="btn btn-whatsapp" onclick="shareSosLocation('whatsapp')">
+                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn_wa">WhatsApp SOS அனுப்பு</span>
+              </button>
+              <button class="btn btn-sms" onclick="shareSosLocation('sms')">
+                <i class="fa-solid fa-message"></i> <span data-i18n="btn_sms">SMS SOS அனுப்பு</span>
+              </button>
+              <button class="btn btn-danger" onclick="playSirenSound()">
+                <i class="fa-solid fa-volume-high"></i> <span data-i18n="btn_siren">அவசர சைரன் (Siren)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Dial Directory -->
+        <div class="safety-grid mt-5">
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-red"><i class="fa-solid fa-phone"></i></div>
+            <div class="sd-info">
+              <h4>112</h4>
+              <p>தேசிய அவசர உதவி எண் (All-in-One ERSS)</p>
+              <small>காவல்துறை, ஆம்புலன்ஸ், தீயணைப்பு</small>
+            </div>
+            <a href="tel:112" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-pink"><i class="fa-solid fa-venus"></i></div>
+            <div class="sd-info">
+              <h4>1091</h4>
+              <p>பெண்கள் உதவி எண் (Women Helpline 24x7)</p>
+              <small>பிரத்யேக மகளிர் காவல் அவசர உதவி</small>
+            </div>
+            <a href="tel:1091" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-purple"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <div class="sd-info">
+              <h4>181</h4>
+              <p>குடும்ப வன்முறை தடுப்பு (Domestic Violence)</p>
+              <small>சட்ட ஆலோசனை & தங்குமிடம் உதவி</small>
+            </div>
+            <a href="tel:181" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-yellow"><i class="fa-solid fa-child"></i></div>
+            <div class="sd-info">
+              <h4>1098</h4>
+              <p>குழந்தைகள் உதவி எண் (Childline)</p>
+              <small>பெண் குழந்தைகள் பாதுகாப்பு & கல்வி</small>
+            </div>
+            <a href="tel:1098" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-cyan"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="sd-info">
+              <h4>1930</h4>
+              <p>சைபர் குற்ற உதவி எண் (Cyber Crime)</p>
+              <small>இணையவழி துன்புறுத்தல் & மோசடி தடுப்பு</small>
+            </div>
+            <a href="tel:1930" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+
+          <div class="speed-dial-card glass-card">
+            <div class="sd-icon bg-blue"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="sd-info">
+              <h4>108</h4>
+              <p>அவசர ஆம்புலன்ஸ் சேவை (Medical Emergency)</p>
+              <small>மருத்துவ அவசர உதவி மற்றும் முதலுதவி</small>
+            </div>
+            <a href="tel:108" class="sd-call-btn"><i class="fa-solid fa-phone-flip"></i> அழை</a>
+          </div>
+        </div>
+
+        <!-- Essential Women Safety Apps -->
+        <div class="safety-apps-section mt-5">
+          <h3 class="section-subheading text-center" data-i18n="apps_subheading"><i class="fa-solid fa-mobile-screen-button"></i> அத்தியாவசிய பெண்கள் பாதுகாப்பு செயலிகள் (Safety Apps)</h3>
+          <div class="apps-grid">
+            <div class="app-card glass-card">
+              <div class="app-badge">TN Police</div>
+              <div class="app-icon-wrap"><i class="fa-solid fa-shield-cat"></i></div>
+              <h4>காவலன் SOS (Kavalan SOS)</h4>
+              <p>தமிழ்நாடு காவல்துறையின் பிரத்யேக செயலி. அவசர பொத்தானை அழுத்தினால் 3 வினாடிகளில் காவல்துறை கட்டுப்பாட்டு அறைக்கு வீடியோ, ஆடியோ மற்றும் ஜிபிஎஸ் தகவல் செல்லும்.</p>
+              <a href="https://play.google.com/store/apps/details?id=com.amtex.kavalansos" target="_blank" rel="noopener" class="app-download-btn">
+                <i class="fa-brands fa-google-play"></i> பதிவிறக்கம் செய்
+              </a>
+            </div>
+
+            <div class="app-card glass-card">
+              <div class="app-badge">Govt of India</div>
+              <div class="app-icon-wrap"><i class="fa-solid fa-landmark"></i></div>
+              <h4>112 இந்தியா (112 India)</h4>
+              <p>மத்திய உள்துறை அமைச்சகத்தின் தேசிய அவசர உதவி செயலி (ERSS). ஒரே கிளிக்கில் காவல்துறை, தீயணைப்பு, ஆம்புலன்ஸ் மற்றும் தன்னார்வலர்களை இணைக்கும் ஸ்மார்ட் சேவை.</p>
+              <a href="https://play.google.com/store/apps/details?id=in.gov.errms.emergency" target="_blank" rel="noopener" class="app-download-btn">
+                <i class="fa-brands fa-google-play"></i> பதிவிறக்கம் செய்
+              </a>
+            </div>
+
+            <div class="app-card glass-card">
+              <div class="app-badge">Safety Network</div>
+              <div class="app-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+              <h4>ஹிம்மத் ப்ளஸ் (Himmat Plus)</h4>
+              <p>பெண்கள் பயணத்தின் போது ஆட்டோ/டேக்ஸி QR குறியீட்டை ஸ்கேன் செய்து நேரலை கண்காணிப்பை குடும்பத்தினருக்கும் கட்டுப்பாட்டு அறைக்கும் பகிர உதவும் அதிநவீன செயலி.</p>
+              <a href="https://play.google.com/store/apps/details?id=com.delhipolice.himmatplus" target="_blank" rel="noopener" class="app-download-btn">
+                <i class="fa-brands fa-google-play"></i> பதிவிறக்கம் செய்
+              </a>
+            </div>
+
+            <div class="app-card glass-card">
+              <div class="app-badge">Protection</div>
+              <div class="app-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+              <h4>சகி ஒன் ஸ்டாப் மையம் (Sakhi OSC)</h4>
+              <p>பாதிக்கப்பட்ட பெண்களுக்கு ஒரே கூரையின் கீழ் மருத்துவ உதவி, சட்ட ஆலோசனை, தற்காலிக பாதுகாப்பு இல்லம் மற்றும் உளவியல் ஆலோசனை வழங்கும் மையம்.</p>
+              <a href="https://wcd.nic.in/schemes/one-stop-centre-scheme-1" target="_blank" rel="noopener" class="app-download-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> விவரம் அறிக
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GOVERNMENT WELFARE SCHEMES FOR WOMEN -->
+    <section class="section-wrapper" id="schemes">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill"><i class="fa-solid fa-hand-holding-dollar"></i> <span data-i18n="schemes_pill">கல்வி & வாழ்வாதாரத் திட்டங்கள்</span></div>
+          <h2 class="section-title" data-i18n="schemes_title">பெண்கள் முன்னேற்றத்திற்கான அரசு நலத்திட்டங்கள்</h2>
+          <p class="section-subtitle" data-i18n="schemes_subtitle">
+            Higher Education Assistance, Marriage Aid, Financial Security, and Free Transport Schemes
+          </p>
+        </div>
+
+        <div class="schemes-grid">
+          <!-- Scheme 1: Pudhumai Penn Scheme -->
+          <div class="scheme-card glass-card highlight-scheme">
+            <div class="scheme-ribbon">மிக முக்கிய திட்டம்</div>
+            <div class="scheme-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <h3 class="scheme-title">புதுமைப் பெண் திட்டம் (Moovalur Ramamirtham Ammaiyar)</h3>
+            <div class="scheme-amount">₹1,000 / மாதம்</div>
+            <p class="scheme-desc">
+              அரசுப் பள்ளிகளில் 6 முதல் 12-ம் வகுப்பு வரை படித்து உயர்கல்வி (பட்டப்படிப்பு, பட்டயப்படிப்பு, ஐடிஐ) பயிலும் மாணவிகளுக்கு மாதம் தோறும் ₹1,000 அவர்களின் வங்கிக் கணக்கில் நேரடியாக வரவு வைக்கப்படுகிறது.
+            </p>
+            <ul class="scheme-features">
+              <li><i class="fa-solid fa-check"></i> தகுதி: அரசுப் பள்ளி மாணவிகள்</li>
+              <li><i class="fa-solid fa-check"></i> பயன்: பட்டப்படிப்பு முடியும் வரை உதவித்தொகை</li>
+              <li><i class="fa-solid fa-check"></i> இலக்கு: பெண் கல்வி இடைநிற்றலைத் தடுத்தல்</li>
+            </ul>
+            <a href="https://www.pudhumaipenn.tn.gov.in/" target="_blank" rel="noopener" class="scheme-btn">
+              அதிகாரப்பூர்வ தளம் <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Scheme 2: Beti Bachao Beti Padhao -->
+          <div class="scheme-card glass-card">
+            <div class="scheme-icon"><i class="fa-solid fa-child-reaching"></i></div>
+            <h3 class="scheme-title">பேட்டி பச்சாவோ, பேட்டி படாவோ</h3>
+            <div class="scheme-amount">கல்வி & பாதுகாப்பு</div>
+            <p class="scheme-desc">
+              பெண் குழந்தைகளின் பிறப்பு விகிதத்தை உயர்த்துதல், பெண் சிசுக்கொலையை தடுத்தல் மற்றும் அவர்களின் பள்ளி கல்வியை உறுதி செய்வதற்கான தேசிய திட்டம்.
+            </p>
+            <ul class="scheme-features">
+              <li><i class="fa-solid fa-check"></i> சுகன்யா சம்ரிதி சேமிப்பு கணக்கு இணைப்பு</li>
+              <li><i class="fa-solid fa-check"></i> வரி விலக்குடன் கூடிய அதிக வட்டி வருமானம்</li>
+              <li><i class="fa-solid fa-check"></i> 18 மற்றும் 21 வயதில் முழு நிதி விடுதலை</li>
+            </ul>
+            <a href="https://wcd.nic.in/bbbp-schemes" target="_blank" rel="noopener" class="scheme-btn">
+              விவரம் அறிக <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Scheme 3: Vidiyal Payanam (Free Bus Travel) -->
+          <div class="scheme-card glass-card">
+            <div class="scheme-icon"><i class="fa-solid fa-bus"></i></div>
+            <h3 class="scheme-title">விடியல் பயணம் (இலவச பேருந்து பயணம்)</h3>
+            <div class="scheme-amount">100% கட்டணமில்லா பயணம்</div>
+            <p class="scheme-desc">
+              தமிழ்நாடு அரசு போக்குவரத்துக் கழகத்தின் சாதாரண கட்டண நகரப் பேருந்துகளில் அனைத்து மகளிரும் கட்டணமின்றி இலவசமாகப் பயணிக்கும் புரட்சிகர திட்டம்.
+            </p>
+            <ul class="scheme-features">
+              <li><i class="fa-solid fa-check"></i> பெண்கள், திருநங்கையர், மாற்றுத்திறனாளிகள் பயன்</li>
+              <li><i class="fa-solid fa-check"></i> மாதந்தோறும் சராசரியாக ₹800 - ₹1,200 வரை சேமிப்பு</li>
+              <li><i class="fa-solid fa-check"></i> பெண்களின் பணி பங்கேற்பு விகிதம் அதிகரிப்பு</li>
+            </ul>
+            <a href="https://tnstc.in/" target="_blank" rel="noopener" class="scheme-btn">
+              விவரம் அறிக <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Scheme 4: Working Women Hostels (Thozhi) -->
+          <div class="scheme-card glass-card">
+            <div class="scheme-icon"><i class="fa-solid fa-building-user"></i></div>
+            <h3 class="scheme-title">தோழி - பணிபுரியும் மகளிர் விடுதிகள்</h3>
+            <div class="scheme-amount">பாதுகாப்பான உறைவிடம்</div>
+            <p class="scheme-desc">
+              சொந்த ஊரை விட்டு பிற நகரங்களில் வேலை பார்க்கும் பெண்களுக்கு குறைந்த கட்டணத்தில், சிசிடிவி, பயோமெட்ரிக் பாதுகாப்பு மற்றும் வைஃபை வசதியுடன் கூடிய நவீன விடுதிகள்.
+            </p>
+            <ul class="scheme-features">
+              <li><i class="fa-solid fa-check"></i> சென்னை, கோவை, திருச்சி, மதுரை உள்ளிட்ட நகரங்களில்</li>
+              <li><i class="fa-solid fa-check"></i> 24 மணி நேர பெண் காப்பாளர் மற்றும் பாதுகாப்பு</li>
+              <li><i class="fa-solid fa-check"></i> இணையவழி முன்பதிவு வசதி</li>
+            </ul>
+            <a href="https://tnwwhcl.in/" target="_blank" rel="noopener" class="scheme-btn">
+              விடுதி முன்பதிவு <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WOMEN BUSINESS & CAREER INCUBATION PORTAL -->
+    <section class="section-wrapper bg-gradient-dark" id="business">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill"><i class="fa-solid fa-chart-line"></i> <span data-i18n="biz_pill">பொருளாதார தற்சார்பு</span></div>
+          <h2 class="section-title" data-i18n="biz_title">பெண்கள் தொழில் விண்ணப்பம் & வேலைவாய்ப்பு மையம்</h2>
+          <p class="section-subtitle" data-i18n="biz_subtitle">
+            Apply for Business Grants, Microloans, Mentorship, and Explore Open Career Streams for Women
+          </p>
+        </div>
+
+        <div class="business-dashboard-grid">
+          <!-- Left: Business Application Form -->
+          <div class="business-form-card glass-card">
+            <div class="form-header">
+              <div class="form-badge"><i class="fa-solid fa-rocket"></i> ஸ்டார்ட்அப் விண்ணப்பம்</div>
+              <h3>பெண்கள் சுயதொழில் / புதிய வணிக உதவிக்கு விண்ணப்பியுங்கள்</h3>
+              <p>Mudra Loan, Stand-Up India, மற்றும் தமிழ்நாடு மகளிர் தொழில் மேம்பாட்டு ஆதரவு பெற உங்கள் விவரங்களை பதிவு செய்யுங்கள்.</p>
+            </div>
+
+            <form id="businessApplyForm" onsubmit="handleBusinessSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bizName">முழுப் பெயர் (Full Name) *</label>
+                  <input type="text" id="bizName" class="form-control" placeholder="எ.கா: சுப்புலட்சுமி" required />
+                </div>
+                <div class="form-group">
+                  <label for="bizPhone">தொலைபேசி எண் (Phone) *</label>
+                  <input type="tel" id="bizPhone" class="form-control" placeholder="எ.கா: 9876543210" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bizEmail">மின்னஞ்சல் (Email)</label>
+                  <input type="email" id="bizEmail" class="form-control" placeholder="name@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="bizCategory">தொழில் துறை (Business Sector) *</label>
+                  <select id="bizCategory" class="form-control" required>
+                    <option value="">துறையை தேர்ந்தெடுக்கவும்</option>
+                    <option value="handloom">கைத்தறி & ஆடை வடிவமைப்பு (Handloom & Textiles)</option>
+                    <option value="agri">இயற்கை விவசாயம் & உணவுப் பதப்படுத்துதல் (Food & Agri)</option>
+                    <option value="tech">மென்பொருள், AI & டிஜிட்டல் சேவைகள் (Tech & Software)</option>
+                    <option value="handicrafts">பாரம்பரிய கைவினைப் பொருட்கள் (Handicrafts & Art)</option>
+                    <option value="education">கல்வி, பயிற்சி & குழந்தை காப்பகம் (EdTech & Childcare)</option>
+                    <option value="health">சுகாதாரம், மூலிகை & யோகா (Health & Wellness)</option>
+                    <option value="retail">சில்லறை வணிகம் & இ-காமர்ஸ் (Retail & E-commerce)</option>
+                    <option value="other">பிற துறைகள் (Other Creative Streams)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bizStage">தொழில் நிலை (Current Stage) *</label>
+                  <select id="bizStage" class="form-control" required>
+                    <option value="idea">புதிய யோசனை மட்டுமே (Idea Stage)</option>
+                    <option value="mvp">மாதிரி வடிவம் தயாராக உள்ளது (Prototype / MVP)</option>
+                    <option value="running">ஏற்கனவே இயங்குகிறது (Existing Business)</option>
+                    <option value="scaling">வணிகத்தை விரிவுபடுத்த வேண்டும் (Scaling)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bizLoanNeeded">தேவைப்படும் நிதி உதவி (Funding Needed) *</label>
+                  <select id="bizLoanNeeded" class="form-control" required>
+                    <option value="mudra_shishu">முத்ரா சிசு கடன் (₹50,000 வரை - வட்டி மானியம்)</option>
+                    <option value="mudra_kishore">முத்ரா கிஷோர் கடன் (₹50,000 முதல் ₹5 லட்சம் வரை)</option>
+                    <option value="mudra_tarun">முத்ரா தருண் கடன் (₹5 லட்சம் முதல் ₹10 லட்சம் வரை)</option>
+                    <option value="standup_india">ஸ்டாண்ட்-அப் இந்தியா (₹10 லட்சம் முதல் ₹1 கோடி வரை)</option>
+                    <option value="mentorship">வழிகாட்டல் மற்றும் சந்தை வாய்ப்பு மட்டுமே (Mentorship)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bizPitch">உங்கள் வணிக யோசனை சுருக்கம் (Business Concept / Summary) *</label>
+                <textarea id="bizPitch" class="form-control" rows="3" placeholder="உங்கள் தொழில் என்ன, உங்கள் தயாரிப்பு என்ன, இதன் மூலம் பெண்களுக்கு என்ன வேலைவாய்ப்பு உருவாகும்?" required></textarea>
+              </div>
+
+              <button type="submit" class="submit-biz-btn">
+                <i class="fa-solid fa-paper-plane"></i> விண்ணப்பத்தை சமர்ப்பிக்கவும் (Submit Application)
+              </button>
+            </form>
+
+            <!-- Application Success Result Box -->
+            <div class="application-success-box" id="bizSuccessBox" style="display: none;">
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>விண்ணப்பம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</h4>
+              <p id="bizSuccessText">உங்கள் விண்ணப்ப எண் உருவாக்கப்பட்டது. பொருத்தமான அரசு மானியங்கள் மற்றும் வழிகாட்டி தகவல்கள் கீழே தரப்பட்டுள்ளன.</p>
+              <div class="recommended-scheme-pill" id="recommendedSchemePill">பரிந்துரைக்கப்பட்ட திட்டம்: முத்ரா திட்டம்</div>
+              <button class="btn btn-outline mt-2" onclick="resetBizForm()"><i class="fa-solid fa-rotate-left"></i> புதிய விண்ணப்பம்</button>
+            </div>
+          </div>
+
+          <!-- Right: Business Loans Schemes & Job Openings -->
+          <div class="business-info-column">
+            <!-- Loan Schemes Card -->
+            <div class="loans-summary-card glass-card">
+              <h3 class="loans-title"><i class="fa-solid fa-sack-dollar"></i> பெண்கள் தொழில் கடன்கள் (Major Loan Schemes)</h3>
+              <div class="loan-item">
+                <div class="loan-icon-box"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <strong>முத்ரா கடன் திட்டம் (PMMY Mudra Loans)</strong>
+                  <p>பிணையமில்லா (No Collateral) கடன் வசதி. சிசு, கிஷோர், தருண் என ₹10 லட்சம் வரை பெண்கள் சுலபமாகப் பெறலாம்.</p>
+                </div>
+              </div>
+              <div class="loan-item">
+                <div class="loan-icon-box"><i class="fa-solid fa-chart-pie"></i></div>
+                <div>
+                  <strong>ஸ்டாண்ட்-அப் இந்தியா (Stand-Up India Scheme)</strong>
+                  <p>ஒவ்வொரு வங்கி கிளையிலும் குறைந்தது ஒரு பெண்ணிற்கு ₹10 லட்சம் முதல் ₹1 கோடி வரை புதிய தொழில் துவங்க கடன்.</p>
+                </div>
+              </div>
+              <div class="loan-item">
+                <div class="loan-icon-box"><i class="fa-solid fa-users"></i></div>
+                <div>
+                  <strong>மகளிர் சுயஉதவிக் குழுக்கள் (SHG Bank Linkage)</strong>
+                  <p>சுயஉதவிக் குழுக்கள் மூலம் சிறு குறு தொழில்களுக்கு வட்டியில்லா மற்றும் குறைந்த வட்டி சுழல் நிதி உதவி.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Women Job Streams Portal -->
+            <div class="jobs-portal-card glass-card mt-4">
+              <div class="jobs-header">
+                <h3 class="jobs-title"><i class="fa-solid fa-user-tie"></i> பெண்கள் வேலைவாய்ப்பு வாய்ப்புகள் (Job Opportunities)</h3>
+                <div class="job-filter-pills">
+                  <button class="job-pill active" onclick="filterJobs('all')">அனைத்தும்</button>
+                  <button class="job-pill" onclick="filterJobs('tech')">IT & Tech</button>
+                  <button class="job-pill" onclick="filterJobs('edu')">கல்வி</button>
+                  <button class="job-pill" onclick="filterJobs('gov')">அரசு பணி</button>
+                </div>
+              </div>
+
+              <div class="job-list-container" id="jobListContainer">
+                <!-- Job Item 1 -->
+                <div class="job-item" data-type="tech">
+                  <div class="job-item-header">
+                    <span class="job-role">Software Engineer / AI Associate</span>
+                    <span class="job-type-badge">Remote / Hybrid</span>
+                  </div>
+                  <div class="job-company"><i class="fa-solid fa-building"></i> NASSCOM Women in Tech Initiative</div>
+                  <div class="job-salary"><i class="fa-solid fa-indian-rupee-sign"></i> ₹6,00,000 - ₹12,00,000 / ஆண்டு</div>
+                  <button class="job-apply-btn" onclick="applyJobModal('Software Engineer - Women In Tech')">விண்ணப்பி <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Job Item 2 -->
+                <div class="job-item" data-type="edu">
+                  <div class="job-item-header">
+                    <span class="job-role">STEM Educator & School Principal</span>
+                    <span class="job-type-badge">Full-time</span>
+                  </div>
+                  <div class="job-company"><i class="fa-solid fa-school"></i> தமிழ்நாடு மகளிர் கல்வி அறக்கட்டளை</div>
+                  <div class="job-salary"><i class="fa-solid fa-indian-rupee-sign"></i> ₹4,50,000 - ₹8,00,000 / ஆண்டு</div>
+                  <button class="job-apply-btn" onclick="applyJobModal('STEM Educator - Education Trust')">விண்ணப்பி <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Job Item 3 -->
+                <div class="job-item" data-type="gov">
+                  <div class="job-item-header">
+                    <span class="job-role">மகளிர் காவல் உதவி ஆய்வாளர் (Sub-Inspector)</span>
+                    <span class="job-type-badge">Govt Service</span>
+                  </div>
+                  <div class="job-company"><i class="fa-solid fa-shield-halved"></i> தமிழ்நாடு சீருடைப் பணியாளர் தேர்வு வாரியம் (TNUSRB)</div>
+                  <div class="job-salary"><i class="fa-solid fa-indian-rupee-sign"></i> ₹36,900 - ₹1,16,600 / மாதம்</div>
+                  <button class="job-apply-btn" onclick="applyJobModal('TNUSRB Women Sub-Inspector')">விண்ணப்பி <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: LEARNING PLATFORM & INTERACTIVE QUIZ -->
+    <section class="section-wrapper" id="learning">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-pill"><i class="fa-solid fa-brain"></i> <span data-i18n="learning_pill">பாரதி கல்விக் கூடம்</span></div>
+          <h2 class="section-title" data-i18n="learning_title">பாரதியார் வாழ்க்கை வரலாறு & வினாடி வினா (Interactive Quiz)</h2>
+          <p class="section-subtitle" data-i18n="learning_subtitle">
+            Test Your Knowledge on Mahakavi Bharathi's Vision, Women's Rights, and Earn Your Digital Scholar Badge!
+          </p>
+        </div>
+
+        <!-- Life Timeline Nodes -->
+        <div class="timeline-wrapper glass-card">
+          <h3 class="timeline-title text-center"><i class="fa-solid fa-clock-rotate-left"></i> பாரதியின் புரட்சி மைல்கற்கள் (Milestones of Bharathi's Life)</h3>
+          <div class="timeline-steps">
+            <div class="timeline-node">
+              <div class="t-year">1882</div>
+              <div class="t-dot"></div>
+              <div class="t-body">
+                <strong>எட்டயபுரக் குழந்தை</strong>
+                <p>சுப்பையா என்ற பாரதி 11 வயதில் கவித்திறமைக்காக 'பாரதி' பட்டம் பெற்றார்.</p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="t-year">1898</div>
+              <div class="t-dot"></div>
+              <div class="t-body">
+                <strong>காசி பயணம்</strong>
+                <p>தலைப்பாகை, முண்டாசு, மீசை பூண்டு தன் அடையாளத்தை உலகளாவிய புரட்சியாக மாற்றினார்.</p>
+              </div>
+            </div>
+
+            <div class="timeline-node highlight-node">
+              <div class="t-year">1906</div>
+              <div class="t-dot"></div>
+              <div class="t-body">
+                <strong>நிவேதிதா அன்னை சந்திப்பு</strong>
+                <p>பெண்களை சக்தியாகக் காணும் பெண் விடுதலைப் புரட்சி மனமாற்றம் ஏற்பட்டது.</p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="t-year">1908</div>
+              <div class="t-dot"></div>
+              <div class="t-body">
+                <strong>புதுச்சேரி தலைமறைவு</strong>
+                <p>பிரிட்டிஷ் அடக்குமுறையை எதிர்த்து புதுவையில் 'இந்தியா' பத்திரிகை மூலம் சுதந்திர கனல் பரப்பினார்.</p>
+              </div>
+            </div>
+
+            <div class="timeline-node">
+              <div class="t-year">1921+</div>
+              <div class="t-dot"></div>
+              <div class="t-body">
+                <strong>அழியாத புதுமைப் பெண்</strong>
+                <p>அவரது பாடல்கள் இன்றும் உலகெங்கும் பெண்களின் உரிமை கீதமாய் ஒலிக்கின்றன.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Quiz Section -->
+        <div class="quiz-container glass-card mt-5" id="quizApp">
+          <div class="quiz-header">
+            <div class="quiz-badge"><i class="fa-solid fa-trophy"></i> பாரதி அறிவுத் தேர்வு</div>
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" id="quizProgressBar" style="width: 20%;"></div>
+            </div>
+            <span class="quiz-step-label" id="quizStepLabel">கேள்வி 1 / 5</span>
+          </div>
+
+          <div class="quiz-body" id="quizBody">
+            <h3 class="quiz-question" id="quizQuestion">பாரதியாருக்கு பெண் விடுதலையின் முக்கியத்துவத்தை உணர்த்தி 'ஞான குரு'வாக விளங்கியவர் யார்?</h3>
+            
+            <div class="quiz-options-list" id="quizOptions">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+
+            <div class="quiz-explanation-box" id="quizExplanation" style="display: none;">
+              <strong><i class="fa-solid fa-lightbulb"></i> விளக்கம்:</strong>
+              <p id="quizExpText"></p>
+            </div>
+          </div>
+
+          <div class="quiz-footer">
+            <button class="btn btn-outline" id="quizPrevBtn" onclick="prevQuizQuestion()" style="display: none;">
+              <i class="fa-solid fa-chevron-left"></i> முந்தைய
+            </button>
+            <button class="btn btn-primary" id="quizNextBtn" onclick="nextQuizQuestion()" disabled>
+              அடுத்த கேள்வி <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Quiz Completed View (Hidden initially) -->
+          <div class="quiz-result-view" id="quizResultView" style="display: none;">
+            <div class="trophy-bounce"><i class="fa-solid fa-medal"></i></div>
+            <h3 class="result-title">வாழ்த்துகள்! நீங்கள் தேர்வை நிறைவு செய்துவிட்டீர்கள்!</h3>
+            <div class="result-score" id="resultScore">மதிப்பெண்: 5 / 5</div>
+            <p class="result-message" id="resultMessage">நீங்கள் பாரதியின் பெண் விடுதலைக் கொள்கைகளை ஆழமாக உணர்ந்த புதுமைச் செம்மல்!</p>
+            <div class="certificate-badge">
+              <i class="fa-solid fa-certificate"></i> "பாரதி புதுமைப் பெண் விழிப்புணர்வு சான்றிதழ்"
+            </div>
+            <button class="btn btn-primary mt-4" onclick="restartQuiz()">
+              <i class="fa-solid fa-rotate-left"></i> மீண்டும் தேர்வு எழுது (Retake Quiz)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING BHARATHI AI CHATBOT & VOICE ASSISTANT LAUNCHER -->
+  <div class="floating-chat-widget">
+    <button class="floating-chat-btn" id="openChatBtn" onclick="toggleChatDrawer()" title="பாரதி AI & குரல் உதவியாளர்">
+      <div class="chat-btn-pulse"></div>
+      <i class="fa-solid fa-feather-pointed chat-feather-icon"></i>
+      <span class="chat-btn-label">பாரதி AI</span>
+    </button>
+  </div>
+
+  <!-- EXPANDABLE CHATBOT DRAWER -->
+  <div class="chat-drawer-overlay" id="chatOverlay" onclick="closeChatDrawer()"></div>
+  <aside class="chat-drawer" id="chatDrawer" aria-label="Bharathi AI Chatbot">
+    <div class="chat-drawer-header">
+      <div class="bot-profile">
+        <div class="bot-avatar">
+          <i class="fa-solid fa-feather"></i>
+        </div>
+        <div class="bot-details">
+          <h4>பாரதி AI அறிவுரை (Bharathi AI)</h4>
+          <span class="bot-status"><i class="fa-solid fa-circle"></i> நேரலையில் (Voice & Chat Enabled)</span>
+        </div>
+      </div>
+      <div class="chat-header-tools">
+        <button class="chat-tool-btn" id="voiceSpeakToggle" onclick="toggleTtsVoice()" title="Toggle Voice Output (பேசுவதை ஆன்/ஆப் செய்)">
+          <i class="fa-solid fa-volume-high" id="ttsIcon"></i>
+        </button>
+        <button class="chat-tool-btn" onclick="clearChatHistory()" title="Clear Chat">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+        <button class="chat-tool-btn close-btn" onclick="closeChatDrawer()" title="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Suggested Quick Query Chips -->
+    <div class="chat-quick-chips">
+      <button class="chip" onclick="sendQuickPrompt('புதுமைப் பெண் பற்றி கூறுங்கள்')">✨ புதுமைப் பெண்</button>
+      <button class="chip" onclick="sendQuickPrompt('பெண்கள் பாதுகாப்பு எண்கள் என்ன?')">🚨 பாதுகாப்பு எண்கள்</button>
+      <button class="chip" onclick="sendQuickPrompt('அரசு வழங்கும் புதுமைப் பெண் திட்டம் என்ன?')">🎓 கல்வி திட்டங்கள்</button>
+      <button class="chip" onclick="sendQuickPrompt('பாரதியின் அரிய கவிதைகள் கூறு')">📜 கவிதைகள்</button>
+      <button class="chip" onclick="sendQuickPrompt('பெண்களுக்கு என்ன தொழில் கடன் உண்டு?')">💼 தொழில் கடன்</button>
+    </div>
+
+    <!-- Chat Messages Container -->
+    <div class="chat-messages-scroll" id="chatMessages">
+      <div class="chat-message bot-msg">
+        <div class="msg-avatar"><i class="fa-solid fa-feather"></i></div>
+        <div class="msg-content">
+          <p><strong>வணக்கம்! நான் மகாகவி பாரதியாரின் கொள்கை வழி உருவாக்கப்பட்ட 'பாரதி AI' உதவியாளர்.</strong></p>
+          <p>பெண் விடுதலை, என் கவிதைகள், மகளிர் பாதுகாப்பு எண்கள், அரசு திட்டங்கள் அல்லது தொழில் கடன்கள் குறித்து என்னிடம் கேளுங்கள். கீழே உள்ள மைக்ரோஃபோன் மூலம் உங்கள் குரல் வழியிலும் பேசலாம்!</p>
+          <span class="msg-time">இப்போது</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Input Area -->
+    <div class="chat-input-area">
+      <!-- Voice Recognition Live Indicator -->
+      <div class="voice-recording-bar" id="voiceRecordingBar" style="display: none;">
+        <span class="recording-dot"></span>
+        <span class="recording-text">பாரதி உங்கள் குரலைக் கேட்கிறார்... பேசுங்கள் (Listening...)</span>
+        <button class="stop-rec-btn" onclick="stopVoiceRecognition()"><i class="fa-solid fa-stop"></i> நிறுத்து</button>
+      </div>
+
+      <form id="chatForm" onsubmit="handleChatSubmit(event)" class="chat-form">
+        <input 
+          type="text" 
+          id="chatInput" 
+          class="chat-text-input" 
+          placeholder="பாரதியிடம் கேளுங்கள்... (Type in Tamil or English)" 
+          autocomplete="off" 
+          required 
+        />
+        <button type="button" class="mic-trigger-btn" id="micBtn" onclick="toggleVoiceInput()" title="குரல் வழி பேசுங்கள் (Speak with Voice)">
+          <i class="fa-solid fa-microphone" id="micIcon"></i>
+        </button>
+        <button type="submit" class="send-trigger-btn" title="அனுப்பு (Send)">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- EMERGENCY SOS MODAL DIALOG -->
+  <div class="modal-overlay" id="sosModalOverlay">
+    <div class="modal-box sos-modal glass-card">
+      <div class="modal-header-danger">
+        <div class="sos-siren-animation"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>அவசர பாதுகாப்பு எச்சரிக்கை (EMERGENCY SOS)</h3>
+        <button class="modal-close-btn" onclick="closeSosModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert-desc">
+          உங்கள் பாதுகாப்பு மிக முக்கியமானது. கீழே உள்ள எண்களை உடனடியாக தொடர்பு கொள்ளுங்கள் அல்லது ஒரு கிளிக்கில் உங்கள் இருப்பிடத்தை வாட்ஸ்அப்பில் பகிருங்கள்!
+        </p>
+
+        <div class="modal-location-preview" id="modalLocationPreview">
+          <i class="fa-solid fa-satellite-dish"></i>
+          <span id="modalLocCoords">GPS இருப்பிடம் கணக்கிடப்படுகிறது...</span>
+        </div>
+
+        <div class="modal-sos-grid">
+          <a href="tel:112" class="modal-sos-call bg-red">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <strong>112 டயல் செய்</strong>
+              <small>அகில இந்திய அவசர உதவி</small>
+            </div>
+          </a>
+          <a href="tel:1091" class="modal-sos-call bg-pink">
+            <i class="fa-solid fa-person-dress"></i>
+            <div>
+              <strong>1091 டயல் செய்</strong>
+              <small>பிரத்யேக பெண்கள் உதவி</small>
+            </div>
+          </a>
+        </div>
+
+        <div class="modal-share-actions">
+          <button class="btn btn-whatsapp w-100" onclick="shareSosLocation('whatsapp')">
+            <i class="fa-brands fa-whatsapp"></i> வாட்ஸ்அப்பில் இருப்பிடத்துடன் SOS அனுப்பு
+          </button>
+          <button class="btn btn-sms w-100 mt-2" onclick="shareSosLocation('sms')">
+            <i class="fa-solid fa-comment-sms"></i> SMS மூலம் SOS அனுப்பு
+          </button>
+          <button class="btn btn-danger w-100 mt-2" id="modalSirenBtn" onclick="toggleSiren()">
+            <i class="fa-solid fa-bullhorn"></i> சத்தமான அவசர சைரன் ஒலி (Siren Alert)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOB APPLICATION MODAL -->
+  <div class="modal-overlay" id="jobModalOverlay">
+    <div class="modal-box glass-card">
+      <div class="modal-header">
+        <h3 id="jobModalTitle">பணிக்கு விண்ணப்பித்தல்</h3>
+        <button class="modal-close-btn" onclick="closeJobModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleJobApplySubmit(event)">
+          <div class="form-group">
+            <label>விண்ணப்பதாரர் பெயர் (Applicant Name) *</label>
+            <input type="text" class="form-control" required placeholder="உங்கள் பெயர்" />
+          </div>
+          <div class="form-group">
+            <label>தொலைபேசி எண் (Phone) *</label>
+            <input type="tel" class="form-control" required placeholder="9876543210" />
+          </div>
+          <div class="form-group">
+            <label>கல்வித் தகுதி (Highest Qualification) *</label>
+            <input type="text" class="form-control" required placeholder="B.E, B.Sc, B.Com, M.A, ITI, etc." />
+          </div>
+          <div class="form-group">
+            <label>முன் அனுபவம் (Experience / Skills)</label>
+            <textarea class="form-control" rows="2" placeholder="உங்கள் திறமைகள்..."></textarea>
+          </div>
+          <button type="submit" class="submit-biz-btn">விண்ணப்பத்தை அனுப்பு</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-logo footer-logo">
+            <i class="fa-solid fa-fire-flame-curved logo-flame"></i>
+            <span class="brand-title-ta">புதுமைப் பெண்</span>
+          </div>
+          <p class="footer-tagline">
+            "நிமிர்ந்த நன்னடை நேர்கொண்ட பார்வையும் நிலத்தில் யார்க்கும் அஞ்சாத நெறிகளும் கொண்டவளே பாரதியின் புதுமைப் பெண்!"
+          </p>
+          <div class="footer-socials">
+            <a href="#hero" title="Home"><i class="fa-solid fa-house"></i></a>
+            <a href="#safety" title="Safety"><i class="fa-solid fa-shield"></i></a>
+            <a href="#business" title="Business"><i class="fa-solid fa-briefcase"></i></a>
+            <a href="#learning" title="Learning"><i class="fa-solid fa-book"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">விரைவு இணைப்புகள்</h4>
+          <ul class="footer-links">
+            <li><a href="#vision">பாரதி பார்வை & வரலாறு</a></li>
+            <li><a href="#poems">பெண் விடுதலைக் கவிதைகள்</a></li>
+            <li><a href="#safety">பெண்கள் பாதுகாப்பு எண்கள்</a></li>
+            <li><a href="#schemes">புதுமைப் பெண் திட்டம்</a></li>
+            <li><a href="#business">சுயதொழில் விண்ணப்பம்</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">அவசர எண்கள் (24/7)</h4>
+          <ul class="footer-contacts">
+            <li><i class="fa-solid fa-phone"></i> தேசிய அவசர எண்: <strong>112</strong></li>
+            <li><i class="fa-solid fa-phone"></i> பெண்கள் உதவி: <strong>1091</strong></li>
+            <li><i class="fa-solid fa-phone"></i> குடும்ப வன்முறை: <strong>181</strong></li>
+            <li><i class="fa-solid fa-phone"></i> குழந்தைகள் உதவி: <strong>1098</strong></li>
+            <li><i class="fa-solid fa-phone"></i> காவல்துறை அவசரம்: <strong>100</strong></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">மகாகவி பாரதியார் நினைவு</h4>
+          <p class="footer-memorial">
+            பாரதியாரின் தூய தமிழ் மற்றும் பெண்ணிய தத்துவத்தை நவீன தலைமுறைக்கும், உலகளாவிய பெண்களின் விடுதலைக்கும் அர்ப்பணிக்கிறது இந்த வலைத்தளம்.
+          </p>
+          <div class="copyright-text">
+            © 2026 பாரதியின் புதுமைப் பெண் திட்டம் | சமத்துவம் & பாதுகாப்பு அரண்.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
